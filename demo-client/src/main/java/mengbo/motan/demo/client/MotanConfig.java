@@ -19,25 +19,24 @@ public class MotanConfig {
         return motanAnnotationBean;
     }
 
-    @Bean
+    @Bean("motan")
     @ConfigurationProperties(prefix = "demo.motan.protocol")
     public ProtocolConfigBean protocolConfig() {
         ProtocolConfigBean config = new ProtocolConfigBean();
         return config;
     }
 
-    @Bean
+    @Bean("demoRegistry")
     @ConfigurationProperties(prefix = "demo.motan.registry")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
         return config;
     }
 
-    @Bean
+    @Bean("clientBasicRefererConfig")
     @ConfigurationProperties(prefix = "demo.motan.client")
     public BasicRefererConfigBean baseRefererConfig() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-
         return config;
     }
 
